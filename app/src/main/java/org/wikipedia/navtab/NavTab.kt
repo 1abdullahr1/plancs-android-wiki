@@ -45,6 +45,8 @@ enum class NavTab(val text: Int, val id: Int, val icon: Int) : EnumCode {
     }
 
     companion object {
+        val EDITS get() = LEARN
+
         fun of(code: Int): NavTab {
             return entries[code]
         }

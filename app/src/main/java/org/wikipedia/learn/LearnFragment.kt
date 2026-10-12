@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken
 import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
+import org.wikipedia.WikipediaApp
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.PageActivity
 import org.wikipedia.page.PageTitle
@@ -44,7 +45,7 @@ class LearnFragment : Fragment() {
                 BaseTheme {
                     LearnScreen(
                         onSelectTopic = { titleText ->
-                            val pageTitle = PageTitle(titleText, org.wikipedia.dataclient.WikiSite.DEFAULT_WIKI_SITE)
+                            val pageTitle = PageTitle(titleText, WikipediaApp.instance.wikiSite)
                             val entry = HistoryEntry(pageTitle, HistoryEntry.SOURCE_INTERNAL_LINK)
                             startActivity(PageActivity.newIntentForNewTab(requireContext(), entry, pageTitle))
                         }
@@ -203,7 +204,7 @@ fun LearnScreen(
                             modifier = Modifier
                                 .size(32.dp)
                                 .clip(RoundedCornerShape(4.dp))
-                                .background(WikipediaTheme.colors.baseColor),
+                                .background(WikipediaTheme.colors.backgroundColor),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(

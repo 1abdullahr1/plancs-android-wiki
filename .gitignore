@@ -41,6 +41,7 @@ all-apks.sh
 device*.png
 *.salive
 *keystore*
+!repo.keystore
 
 # Log Files
 *.log

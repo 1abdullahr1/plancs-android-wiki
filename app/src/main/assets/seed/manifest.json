@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "contentHash": "7df58a59445022a0",
+  "buildTimestamp": "2026-10-12T16:44:35.367Z",
+  "counts": {
+    "articles": 32,
+    "guides": 12,
+    "courses": 9,
+    "tools": 27
+  }
+}
